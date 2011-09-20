@@ -8,11 +8,12 @@
 
 #import "MasterViewController.h"
 
-#import "DetailViewController.h"
-
+#import "MapViewController.h"
+#import "Venue.h"
 @implementation MasterViewController
 
 @synthesize detailViewController = _detailViewController;
+@synthesize venues = _venues;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +40,27 @@
 
 - (void)viewDidLoad
 {
+	Venue *venue0 = [[Venue alloc] initWithName:@"Marinha0" withLatitude:-30.05 withLongitude:-51.20];
+	venue0.description = @"Este parque esta jogado as tracasasdajsdlkajsdlja asdasasad asdaksjdasd asdlkasjdasd asdlkasdas dasdk asldk asdasldkasdklsad asdkalf asklf dfsdlkfsdlfksd fsdklf sdfklsdfksdlfksdlfsdkfsdlkf sdlfksdlfksdklf sdlfkdsf dsflksdkf dsflsdkf sdlkflsdkflsdkflsdkf sdfklsdflksdflksdlfksdfsdlkf sklfsdfk sdlfsdklfsdkflskd fslkdf sdlkf sldkfklsdfdslfksdlfksdflksdf lskdf sldkflsdkfsdklfksdlfsdlkfsdlk fdslkfsldkflsdkflsdkfsdklf dlskf lsdkfsdlfskdflsdlfksdfsdlkf sdklfdslkfklsd flksd flksdkflsdfkldskfdslfkdslfkdsfldskfsdlfksdlfksdlf sdflk dsf";
+	NSArray *photos = [[NSArray alloc] initWithObjects:@"marinha1.jpg", @"marinha2.jpg", @"marinha3.jpg", nil];
+	venue0.photos = photos;
+	[photos release];
+
+	Venue *venue1 = [[Venue alloc] initWithName:@"Marinha1" withLatitude:-30.05 withLongitude:-51.10];
+	venue1.description = @"Este parque esta jogado as tracasasdajsdlkajsdlja asdasasad asdaksjdasd asdlkasjdasd asdlkasdas dasdk asldk asdasldkasdklsad asdkalf asklf dfsdlkfsdlfksd fsdklf sdfklsdfksdlfksdlfsdkfsdlkf sdlfksdlfksdklf sdlfkdsf dsflksdkf dsflsdkf sdlkflsdkflsdkflsdkf sdfklsdflksdflksdlfksdfsdlkf sklfsdfk sdlfsdklfsdkflskd fslkdf sdlkf sldkfklsdfdslfksdlfksdflksdf lskdf sldkflsdkfsdklfksdlfsdlkfsdlk fdslkfsldkflsdkflsdkfsdklf dlskf lsdkfsdlfskdflsdlfksdfsdlkf sdklfdslkfklsd flksd flksdkflsdfkldskfdslfkdslfkdsfldskfsdlfksdlfksdlf sdflk dsf";
+	photos = [[NSArray alloc] initWithObjects:@"marinha1.jpg", @"marinha2.jpg", @"marinha3.jpg", nil];
+	venue1.photos = photos;
+	[photos release];
+
+    Venue *venue2 = [[Venue alloc] initWithName:@"Marinha2" withLatitude:-30.05 withLongitude:-51.00];
+	venue2.description = @"Este parque esta jogado as tracasasdajsdlkajsdlja asdasasad asdaksjdasd asdlkasjdasd asdlkasdas dasdk asldk asdasldkasdklsad asdkalf asklf dfsdlkfsdlfksd fsdklf sdfklsdfksdlfksdlfsdkfsdlkf sdlfksdlfksdklf sdlfkdsf dsflksdkf dsflsdkf sdlkflsdkflsdkflsdkf sdfklsdflksdflksdlfksdfsdlkf sklfsdfk sdlfsdklfsdkflskd fslkdf sdlkf sldkfklsdfdslfksdlfksdflksdf lskdf sldkflsdkfsdklfksdlfsdlkfsdlk fdslkfsldkflsdkflsdkfsdklf dlskf lsdkfsdlfskdflsdlfksdfsdlkf sdklfdslkfklsd flksd flksdkflsdfkldskfdslfkdslfkdsfldskfsdlfksdlfksdlf sdflk dsf";
+	photos = [[NSArray alloc] initWithObjects:@"marinha1.jpg", @"marinha2.jpg", @"marinha3.jpg", nil];
+	venue2.photos = photos;
+	[photos release];
+    
+	NSArray *tmpVenues = [[NSArray alloc] initWithObjects:venue0, venue1, venue2, venue2, nil];
+    self.venues = tmpVenues;
+    [tmpVenues release];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -99,7 +121,7 @@
     }
 
     // Configure the cell.
-    cell.textLabel.text = NSLocalizedString(@"Detail", @"Detail");
+    cell.textLabel.text = NSLocalizedString(@"Maps", @"Maps");
     return cell;
 }
 
@@ -144,8 +166,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (!self.detailViewController) {
-        self.detailViewController = [[[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil] autorelease];
+        self.detailViewController = [[[MapViewController alloc] initWithNibName:nil bundle:nil] autorelease];
     }
+    self.detailViewController.venues = _venues;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }
 
