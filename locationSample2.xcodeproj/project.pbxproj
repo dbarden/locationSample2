@@ -42,10 +42,10 @@
 		D0810DAE1428E108002F3E5A /* NIToolbarPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0810DAA1428E108002F3E5A /* NIToolbarPhotoViewController.m */; };
 		D0810DB11428E192002F3E5A /* PhotosController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0810DB01428E192002F3E5A /* PhotosController.m */; };
 		D0810DB3142900EA002F3E5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0810DB2142900EA002F3E5A /* CoreGraphics.framework */; };
-		D0810DB614290178002F3E5A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0810DB414290178002F3E5A /* DetailViewController.xib */; };
 		D0810DBB142901F2002F3E5A /* marinha1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0810DB8142901F2002F3E5A /* marinha1.jpg */; };
 		D0810DBC142901F2002F3E5A /* marinha2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0810DB9142901F2002F3E5A /* marinha2.jpg */; };
 		D0810DBD142901F2002F3E5A /* marinha3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0810DBA142901F2002F3E5A /* marinha3.jpg */; };
+		D08E8A1714290E5B0017F367 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08E8A1614290E5A0017F367 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,10 +119,10 @@
 		D0810DAF1428E192002F3E5A /* PhotosController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosController.h; sourceTree = "<group>"; };
 		D0810DB01428E192002F3E5A /* PhotosController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosController.m; sourceTree = "<group>"; };
 		D0810DB2142900EA002F3E5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D0810DB514290178002F3E5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../../LocationSample/LocationSample/en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 		D0810DB8142901F2002F3E5A /* marinha1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marinha1.jpg; sourceTree = "<group>"; };
 		D0810DB9142901F2002F3E5A /* marinha2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marinha2.jpg; sourceTree = "<group>"; };
 		D0810DBA142901F2002F3E5A /* marinha3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marinha3.jpg; sourceTree = "<group>"; };
+		D08E8A1614290E5A0017F367 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = ../DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +186,7 @@
 				D0810D431428BFDC002F3E5A /* MasterViewController.m */,
 				D0810D451428BFDC002F3E5A /* MapViewController.h */,
 				D0810D461428BFDC002F3E5A /* MapViewController.m */,
-				D0810DB414290178002F3E5A /* DetailViewController.xib */,
+				D08E8A1614290E5A0017F367 /* DetailViewController.xib */,
 				D0810D481428BFDC002F3E5A /* MasterViewController.xib */,
 				D0810D371428BFDB002F3E5A /* Supporting Files */,
 			);
@@ -350,10 +350,10 @@
 			files = (
 				D0810D3B1428BFDB002F3E5A /* InfoPlist.strings in Resources */,
 				D0810D4A1428BFDC002F3E5A /* MasterViewController.xib in Resources */,
-				D0810DB614290178002F3E5A /* DetailViewController.xib in Resources */,
 				D0810DBB142901F2002F3E5A /* marinha1.jpg in Resources */,
 				D0810DBC142901F2002F3E5A /* marinha2.jpg in Resources */,
 				D0810DBD142901F2002F3E5A /* marinha3.jpg in Resources */,
+				D08E8A1714290E5B0017F367 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,14 +412,6 @@
 				D0810D491428BFDC002F3E5A /* en */,
 			);
 			name = MasterViewController.xib;
-			sourceTree = "<group>";
-		};
-		D0810DB414290178002F3E5A /* DetailViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0810DB514290178002F3E5A /* en */,
-			);
-			name = DetailViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -509,6 +501,7 @@
 				D0810D521428BFDC002F3E5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
